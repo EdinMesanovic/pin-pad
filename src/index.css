@@ -1,0 +1,49 @@
+* {
+  background-color: rgb(182, 182, 182);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100% 100% 100%;
+  width: 33%;
+}
+.grid-item {
+  background-color: rgb(182, 182, 182);
+
+  height: 60px;
+  border: none;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item:active {
+  border: 2px solid black;
+}
+
+.grid-item:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+  width: 21%;
+  padding-top: 40px;
+  margin: 1px auto;
+  border: 1px solid black;
+}
+
+.input-pin {
+  margin-bottom: 30px;
+  margin-left: 10px;
+  width: 90%;
+  height: 50px;
+  font-size: 40px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+}
