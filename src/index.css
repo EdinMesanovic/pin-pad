@@ -32,6 +32,8 @@
   padding-top: 40px;
   margin: 1px auto;
   border: 1px solid black;
+  min-width: 300px;
+  min-height: 360px;
 }
 
 .input-pin {

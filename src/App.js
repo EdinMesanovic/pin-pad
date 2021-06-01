@@ -45,7 +45,12 @@ function App() {
 
   return (
     <div className='container'>
-      <input value={state} className='input-pin' type='password'></input>
+      <input
+        value={state}
+        className='input-pin'
+        type='password'
+        disabled={disabled}
+      ></input>
       <div className='grid-container'>
         <button
           value='1'
