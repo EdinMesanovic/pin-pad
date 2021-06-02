@@ -7,31 +7,35 @@ function App() {
   const clickHandle = (e) => {
     setState(state + e.target.value);
   };
-  const button = document.querySelectorAll(".disabled");
-  const enter = () => {
-    if (state === "") {
-      alert("Field is empty");
-    } else {
-      if (state === "1234") {
-        document.querySelector(".input-pin").setAttribute("type", "text");
-        setState("OK");
-        setDisabled(true);
-      } else {
-        document.querySelector(".input-pin").setAttribute("type", "text");
-        setState("ERROR");
-        setDisabled(true);
-        counter = counter + 1;
 
-        if (counter === 3) {
-          setState("LOCKED");
+  const enter = () => {
+    if (state.length !== 4) {
+      alert("enter four numbers");
+    } else {
+      if (state === "") {
+        alert("Field is empty");
+      } else {
+        if (state === "1234") {
+          document.querySelector(".input-pin").setAttribute("type", "text");
+          setState("OK");
           setDisabled(true);
-          document
-            .querySelector(".clear")
-            .setAttribute("disabled", "{disabled}");
-          setTimeout(() => {
-            document.querySelector(".clear").removeAttribute("disabled");
-            counter = 0;
-          }, 30000);
+        } else {
+          document.querySelector(".input-pin").setAttribute("type", "text");
+          setState("ERROR");
+          setDisabled(true);
+          counter = counter + 1;
+
+          if (counter === 3) {
+            setState("LOCKED");
+            setDisabled(true);
+            document
+              .querySelector(".clear")
+              .setAttribute("disabled", "{disabled}");
+            setTimeout(() => {
+              document.querySelector(".clear").removeAttribute("disabled");
+              counter = 0;
+            }, 30000);
+          }
         }
       }
     }
